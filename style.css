@@ -1,0 +1,153 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Background Gradient Animation */
+body {
+    margin: 0;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(45deg, #333, #666);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+}
+
+@keyframes gradientMove {
+    0% {
+        background-position: 0% 0%;
+    }
+    50% {
+        background-position: 100% 100%;
+    }
+    100% {
+        background-position: 0% 0%;
+    }
+}
+
+/* Selection Styling */
+::selection {
+    color: #fff;
+    background-color: #3a3a3a;
+}
+
+/* Form Wrapper */
+.wrapper {
+    width: 370px;
+    padding: 25px 30px;
+    border-radius: 8px;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+    box-shadow: 0 8px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Header */
+.wrapper header {
+    font-size: 26px;
+    font-weight: 600;
+    color: #333;
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Form Styling */
+.wrapper form {
+    display: flex;
+    flex-direction: column;
+}
+
+form .row {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form .row label {
+    font-size: 16px;
+    color: #555;
+    margin-bottom: 5px;
+}
+
+form :where(textarea, select, button) {
+    outline: none;
+    width: 100%;
+    border: none;
+    border-radius: 5px;
+}
+
+form .row textarea {
+    resize: none;
+    height: 120px;
+    font-size: 14px;
+    padding: 12px;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+}
+
+form .row textarea::-webkit-scrollbar {
+    width: 8px;
+}
+
+form .row .outer {
+    height: 45px;
+    display: flex;
+    padding: 0 10px;
+    align-items: center;
+    border-radius: 5px;
+    justify-content: center;
+    border: 1px solid #ccc;
+    background-color: rgba(255, 255, 255, 0.9); /* White background with 90% opacity */
+}
+
+form .row select {
+    font-size: 14px;
+    background: none;
+    color: #333;
+}
+
+form .row select::-webkit-scrollbar {
+    width: 8px;
+}
+
+form .row select::-webkit-scrollbar-track {
+    background: #f9f9f9;
+}
+
+form .row select::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 8px;
+    border-right: 2px solid #f9f9f9;
+}
+
+form button {
+    height: 52px;
+    color: #fff;
+    font-size: 16px;
+    background-color: #5a67d8;
+    cursor: pointer;
+    margin-top: 10px;
+    transition: background-color 0.3s ease, transform 0.2s ease;
+}
+
+form button:hover {
+    background-color: #4348d7;
+    transform: translateY(-2px);
+}
+
+form button:active {
+    background-color: #3a39c0;
+    transform: translateY(1px);
+}
+
+/* Responsive Design */
+@media (max-width: 400px) {
+    .wrapper {
+        max-width: 90%;
+        width: auto;
+    }
+}
